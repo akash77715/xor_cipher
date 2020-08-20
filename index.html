@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>XOR Cipher</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<center>
+		<!-- Header -->
+        <div class="header">
+            <h1 style="margin: 0; padding:5px;">Cryptography & Network Security LAB</h1>
+            <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                Program in C to XOR each character in the given string with 0.
+            </marquee>
+        </div>
+    </center>
+	<br/>
+	
+	<center>
+	<div class="row">
+		<div id="main" class="column" style="text-align:left;">
+		<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Input</h2>
+			<div id="in_strlabel">
+				<label for="in_str" style="font-size:25px;font-weight:bold;font-family:arial;">Input String</label><br><br>
+				<input type="text" class="textbox" name="in_str" id="in_str" placeholder="Input string to be encrypted" maxlength="5">
+			</div>
+			<div id="keylabel">
+			<label for="key" style="font-size:25px;font-weight:bold;font-family:arial;">Select Key</label><br><br>
+			<select class="textbox" id="key" name="key">
+				<option value="0">0</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+			</select><br><br>
+			</div>
+			<br>
+			<div id="btn1" >
+				<input type="button" class="btn-next" value="Next" onclick="store()">
+				<input type="reset" class="btn-rst" value="Reset" onclick="reset()">
+			</div>
+			<div id="btn2">
+				<input type="button" class="btn-next" id="btnenc" value="Encrypt" onclick="keystore()">
+				<input type="reset" class="btn-rst" value="Reset" onclick="reset()">
+			</div>
+			
+			<div id="decrypt">
+			<hr>
+			<h1>Decrypt</h1>
+				<label for="in_str" style="font-size:25px;font-weight:bold;font-family:arial;">Input Encrypted String</label><br><br>
+				<input type="text" class="textbox" name="in_str2" id="in_str2" placeholder="Input string to be decrypted" maxlength="5"><br><br>
+				<label for="key" style="font-size:25px;font-weight:bold;font-family:arial;">Select Key</label><br><br>
+				<select class="textbox" id="key2" name="key2">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+				</select>
+				<input type="button" class="btn-next" id="btndec" value="Decrypt" onclick="decrypt()">
+			</div>
+			</div>
+			
+			
+			<!-- INPUT DISPLAY -->
+			<div id="in_dis" class="column col2" style="text-align:center;">
+			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Logic</h2>
+			<center>
+			<div  id="inchar">
+				<table style="text-align:center;">
+				<tr>
+					<td class="charbox" name="inchar1" id="inchar1"></td>
+					<td class="charbox" name="inchar2" id="inchar2"></td>
+					<td class="charbox" name="inchar3" id="inchar3"></td>
+					<td class="charbox" name="inchar4" id="inchar4"></td>
+					<td class="charbox" name="inchar5" id="inchar5"></td>
+				</tr>
+				</table>
+			</div>
+			
+			<br>
+			<!--XOR SYMBOL-->
+			<div id="cb">
+				<table style="text-align:center;">
+				<tr>
+					<td class="cbox" >+</td>
+					<td class="cbox" >+</td>
+					<td class="cbox" >+</td>
+					<td class="cbox" >+</td>
+					<td class="cbox" >+</td>
+				</tr>
+				</table>
+			</div>
+			
+			<br>
+			<!--KEY DISPLAY-->
+			<div id="keyb">
+				<table style="text-align:center;">
+				<tr>
+					<td class="charbox" id="keyb1" name="keyb1"></td>
+					<td class="charbox" id="keyb2" name="keyb2"></td>
+					<td class="charbox" id="keyb3" name="keyb3"></td>
+					<td class="charbox" id="keyb4" name="keyb4"></td>
+					<td class="charbox" id="keyb5" name="keyb5"></td>
+				</tr>
+				</table>
+			</div>
+			
+			<br>
+			<!--EQUAL SYMBOL-->
+			<div id="eqlb">
+				<table style="text-align:center;">
+				<tr>
+					<td class="eqlbox" >=</td>
+					<td class="eqlbox" >=</td>
+					<td class="eqlbox" >=</td>
+					<td class="eqlbox" >=</td>
+					<td class="eqlbox" >=</td>
+				</tr>
+				</table>
+			</div>
+			
+			
+			<br>
+			<!-- OUTPUT DISPLAY -->
+			<div id="outchar">
+				<table>
+				<tr>
+					<td class="charbox" name="outchar1" id="outchar1"></td>
+					<td class="charbox" name="outchar2" id="outchar2"></td>
+					<td class="charbox" name="outchar3" id="outchar3"></td>
+					<td class="charbox" name="outchar4" id="outchar4"></td>
+					<td class="charbox" name="outchar5" id="outchar5"></td>
+				</tr>
+				</table>
+			</div>
+			</center>
+			</div>
+		
+			<div class="column col3">
+			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Output</h2>
+				<h1 id="outenc">Encryption</h1>
+				<span id="out1" style="font-weight:bold;font-size:25px;">Plain Text : </span><br><br>
+				<span id="out2" style="font-weight:bold;font-size:25px;">Key : </span><br><br>
+				<span id="out3" style="font-weight:bold;font-size:25px;">Encrypted Text : </span><br><br>
+				
+				<h1 id="outdec">Decryption</h1>
+				<span id="out4" style="font-weight:bold;font-size:25px;">Encrypted Text : </span><br><br>
+				<span id="out5" style="font-weight:bold;font-size:25px;">Key : </span><br><br>
+				<span id="out6" style="font-weight:bold;font-size:25px;">Plain Text : </span><br><br>
+			</div>
+			
+		</div>
+	</center>
+	
+	
+</body>
+<script src="js/script_default.js"></script>
+<script src="js/script_function.js"></script>
+</html>

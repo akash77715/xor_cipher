@@ -1,0 +1,16 @@
+document.getElementById("keylabel").style.display="none";
+document.getElementById("inchar").style.display="none";
+document.getElementById("cb").style.display="none";
+document.getElementById("keyb").style.display="none";
+document.getElementById("eqlb").style.display="none";
+document.getElementById("outchar").style.display="none";
+document.getElementById("btn2").style.display="none";
+document.getElementById("decrypt").style.display="none";
+document.getElementById("outenc").style.display="none";
+document.getElementById("outdec").style.display="none";
+document.getElementById("out1").style.display="none";
+document.getElementById("out2").style.display="none";
+document.getElementById("out3").style.display="none";
+document.getElementById("out4").style.display="none";
+document.getElementById("out5").style.display="none";
+document.getElementById("out6").style.display="none";
