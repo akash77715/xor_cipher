@@ -121,3 +121,12 @@
             }
 		
         }
+		.codetable{
+    background-color: whitesmoke; 
+    margin: 0px 0px 12px 12px; 
+    padding: 12px 12px 12px 12px; 
+    border-radius: 0px;
+    font-size: 12px;
+	border-color:1px solid black;
+	border-collapse: separate;
+}
