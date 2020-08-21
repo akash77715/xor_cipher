@@ -99,7 +99,8 @@
             padding: 10px;
             height: 600px;
             border: medium solid #000000;
-			border-radius: 2%;
+	    border-radius: 2%;
+	    overflow-x:auto;
             margin-left: 2px;
         }
         .col2{
