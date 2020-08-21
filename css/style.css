@@ -104,6 +104,7 @@
         }
         .col2{
                 width: 45%;
+		overflow-x:auto;
         }
 
         .col3{
