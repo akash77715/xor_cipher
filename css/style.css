@@ -21,6 +21,14 @@
 		.textbox:focus{
 			outline: none;
 		}
+		.viewas {
+		width:100px;
+        padding: 2px 2px;
+		border: 2px solid black;
+		}
+		.viewas:focus{
+			outline: none;
+		}
 		
 		.charbox {
 			width: 25px;

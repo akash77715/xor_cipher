@@ -4,6 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>XOR Cipher</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+.codetable{
+    background-color: whitesmoke; 
+    margin: 0px 0px 12px 12px; 
+    padding: 12px 12px 12px 12px; 
+    border-radius: 0px;
+    font-size: 12px;
+	border-color:1px solid black;
+	border-collapse: separate;
+}
+	</style>
 </head>
 <body>
 	<center>
@@ -77,7 +88,16 @@
 			<div id="in_dis" class="column col2" style="text-align:center;">
 			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Logic</h2>
 			<center>
+			<div style="float:right;font-size:19px;">
+			view&nbsp;<select class="viewas" onchange="view_change()">
+				<option>Logical</option>
+				<option>Code</option>
+			</select>
+			</div>
+			<br>
 			
+			<hr>
+			<div id="logical">
 			
 			<div  id="inchar">
 				<table style="text-align:center;">
@@ -122,7 +142,123 @@
 				</tr>
 				</table>
 			</div>
+			</div>
 			
+			<div id="code">
+				<table class="codetable">
+	
+	<tr id="loc01">
+		<td>#include&lt;stdio.h&gt;</td>
+	</tr>
+	
+	<tr id="loc02">
+		<td>#include&lt;string.h&gt;</td>
+	</tr>
+	
+	<tr id="loc03">
+		<td>char output_str[20];</td>
+	</tr>
+	
+	<tr id="loc04">
+		<td>char *enc_dec(char *text,char key);</td>
+	</tr>
+	
+	<tr id="loc05">
+		<td >void main(){</td>
+	</tr>
+	
+	<tr id="loc06">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char input_str[20],*enc_str,*dec_str,enc_key;</td>
+	</tr>
+
+	
+	<tr id="loc07">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\nEnter String\n");</td>
+	</tr>
+	
+	<tr id="loc08">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gets(input_str);</td>
+	</tr>
+
+	
+	<tr id="loc09">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\nEnter Encryption Key\n");</td>
+	</tr>
+	
+	<tr id="loc10">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%c",&enc_key);</td>
+	</tr>
+	
+	
+	<tr id="loc11">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getchar();</td>
+	</tr>
+	
+	<tr id="loc12">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enc_str=enc_dec(input_str,enc_key);</td>
+	</tr>
+
+	
+	<tr id="loc13">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n%s\n",enc_str);</td>
+	</tr>
+	
+	<tr id="loc14">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\nEnter String\n");</td>
+	</tr>
+	
+	<tr id="loc15">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gets(input_str);</td>
+	</tr>
+	
+	<tr id="loc16">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\nEnter Decryption Key\n");</td>
+	</tr>
+
+	
+	<tr id="loc17">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scanf("%c",&enc_key);</td>
+	</tr>
+	
+	<tr id="loc18">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_str=enc_dec(input_str,enc_key);</td>
+	</tr>
+
+	
+	<tr id="loc19">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n%s\n",dec_str);</td>
+	</tr>
+	
+	<tr id="loc20">
+		<td>}</td>
+	</tr>
+	
+	<tr id="loc21">
+		<td>char *enc_dec(char *text,char key){</td>
+	</tr>
+	
+	<tr id="loc22">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int i;</td>
+	</tr>
+	
+	<tr id="loc23">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (i = 0; i < strlen(text); i++)</td>
+	</tr>
+	
+	<tr id="loc24">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output_str[i]=text[i]^key;</td>
+	</tr>
+	
+	<tr id="loc25">
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (char *)output_str;</td>
+	</tr>
+	
+	<tr id="loc26">
+		<td>}</td>
+	</tr>
+	
+	</table>
+			</div>
 			
 			</center>
 			</div>
