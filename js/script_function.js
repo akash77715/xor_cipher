@@ -19,7 +19,7 @@
 			document.getElementById("outenc").style.display="block";
 			document.getElementById("out1").style.display="block";
 			
-			
+			document.getElementById("hintenc").style.display="none";
 			document.getElementById("in_strlabel").style.display="none";
 			document.getElementById("btn1").style.display="none";
 			document.getElementById("btn2").style.display="block";
@@ -117,6 +117,7 @@
 			document.getElementById('btnenc').disabled = true;
 			document.getElementById("decrypt").style.display="block";
 			document.getElementById('btnenc').style.backgroundColor = 'grey';
+			document.getElementById('btnenc').value = 'Encrypted';
 			
 			document.getElementById('out3').innerHTML="CIPHER TEXT : " + enc_str
 			document.getElementById("out3").style.display="block";
@@ -193,12 +194,14 @@
 			document.getElementById("loc18").style.color="white";
 			document.getElementById("loc18").style.fontWeight="bold";
 			document.getElementById("loc18").style.background="red";
-			
+			document.getElementById("hintdec").innerHTML="Length of encrypted text and plain text must be same.<br>Decrypted String mismatched with Original String.";
 			if(instr==dec_str){
 				document.getElementById('in_str2').disabled = true;
 				document.getElementById('key2').disabled = true;
 				document.getElementById('btndec').disabled = true;
 				document.getElementById('btndec').style.backgroundColor = 'grey';
+				document.getElementById('btndec').value = 'Decrypted';
+				document.getElementById("hintdec").style.display="none";
 				document.getElementById("out6").style.color = 'green';
 				
 				//animating code view

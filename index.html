@@ -25,6 +25,7 @@
 				<label for="in_str" style="font-size:25px;font-weight:bold;font-family:arial;">Input String</label><br><br>
 				<input type="text" class="textbox" name="in_str" id="in_str" placeholder="Input string to be encrypted" maxlength="10">
 			</div>
+			
 			<div id="keylabel">
 			<label for="key" style="font-size:25px;font-weight:bold;font-family:arial;">Select Key</label><br><br>
 			<select class="textbox" id="key" name="key">
@@ -40,7 +41,9 @@
 				<option value="9">9</option>
 			</select><br><br>
 			</div>
-			<br>
+			<p id="hintenc" style="color:red;font-size:13px;font-style:italic;font-weight:bold;">Only alphabetical string is acceptable.
+			<br>String length can range from 1 to 10.
+			</p>
 			<div id="btn1" >
 				<input type="button" class="btn-next" value="Next" onclick="store()">
 				<input type="reset" class="btn-rst" value="Reset" onclick="reset()">
@@ -69,6 +72,8 @@
 					<option value="9">9</option>
 				</select>
 				<input type="button" class="btn-next" id="btndec" value="Decrypt" onclick="decrypt()">
+				<p id="hintdec" style="color:red;font-size:13px;font-style:italic;font-weight:bold;">Length of encrypted text and plain text must be same.
+			</p>
 			</div>
 			</div>
 			
