@@ -54,7 +54,7 @@
 		key = e.value;
 		//KEY DISPLAY
 			for(i=0;i<instr.length;i++){
-				document.getElementById('cbox').innerHTML=document.getElementById('cbox').innerHTML+"<td class='cbox'>+<td>";
+				document.getElementById('cbox').innerHTML=document.getElementById('cbox').innerHTML+"<td class='eqlbox'><img src='images/xor_icon.png' width='99%' height='90%'><td>";
 			}
 			
 			for(i=0;i<instr.length;i++){
@@ -68,7 +68,7 @@
 			document.getElementById("keyb").style.display="block";
 			
 			for(i=0;i<instr.length;i++){
-				document.getElementById('eqlt').innerHTML=document.getElementById('eqlt').innerHTML+"<td class='eqlbox'>=<td>";
+				document.getElementById('eqlt').innerHTML=document.getElementById('eqlt').innerHTML+"<td class='eqlbox'><img src='images/down_arrow_icon.png' width='99%' height='99%'><td>";
 			}
 			//animating code view
 			document.getElementById("loc09").style.color="black";
@@ -143,7 +143,7 @@
 			key2 = e.value;
 			//KEY DISPLAY
 			for(i=0;i<instr2.length;i++){
-				document.getElementById('cbox').innerHTML=document.getElementById('cbox').innerHTML+"<td class='cbox'>+<td>";
+				document.getElementById('cbox').innerHTML=document.getElementById('cbox').innerHTML+"<td class='eqlbox'><img src='images/xor_icon.png' width='99%' height='90%'><td>";
 			}
 			
 			for(i=0;i<instr2.length;i++){
@@ -152,7 +152,7 @@
 			
 			
 			for(i=0;i<instr.length;i++){
-				document.getElementById('eqlt').innerHTML=document.getElementById('eqlt').innerHTML+"<td class='eqlbox'>=<td>";
+				document.getElementById('eqlt').innerHTML=document.getElementById('eqlt').innerHTML+"<td class='eqlbox'><img src='images/down_arrow_icon.png' width='99%' height='99%'><td>";
 			}
 			
 			dec_str="";
