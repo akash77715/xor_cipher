@@ -25,12 +25,23 @@
 		
 		.charbox {
 			width: 35px;
-			height: 25px;
+			height: 20px;
 			padding: 5px 5px;
 			border: 1.5px solid black;
 			margin-left:3px;
 			font-weight:bold;
-			font-size:20px;
+			font-size:15px;
+		}
+		
+		.ascbox {
+			width: 25px;
+			height: 20px;
+			padding: 5px 5px;
+			border: 1.5px solid blue;
+			margin-left:3px;
+			font-weight:bold;
+			color:blue;
+			font-size:12px;
 		}
 		
 		.cbox {
@@ -131,7 +142,7 @@
     margin: 0px 0px 12px 12px; 
     padding: 12px 12px 12px 12px; 
     border-radius: 0px;
-    font-size: 12.5px;
+    font-size: 13px;
 	border-color:1px solid black;
 	border-collapse: separate;
 }

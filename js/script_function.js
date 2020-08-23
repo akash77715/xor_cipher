@@ -10,9 +10,10 @@
 		if(instr.match(letters) && instr.length>0){
 			//INPUT DISPLAY
 			for(i=0;i<instr.length;i++){
-				document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+instr.charAt(i)+"'</td></tr><tr><td class='charbox'>"+instr.charCodeAt(i)+"</td></tr></table></td>";
+				document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>"+instr.charAt(i)+"</td></tr><tr><td class='ascbox'>"+instr.charCodeAt(i)+"</td></tr></table></td>";
 			//	"<td class='charbox'>'"+instr.charAt(i)+"'<td>";
 			}
+			document.getElementById("hintasc").style.display="block";
 			
 			
 			document.getElementById('out1').innerHTML="PLAIN TEXT : " + instr;
@@ -63,7 +64,7 @@
 			
 			for(i=0;i<instr.length;i++){
 			
-				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='charbox'>"+key.charCodeAt(0)+"</td></tr><tr><td class='charbox'>'"+key+"'</td></tr></table></td>";
+				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='ascbox'>"+key.charCodeAt(0)+"</td></tr><tr><td class='charbox'>"+key+"</td></tr></table></td>";
 				//document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>'"+key+"'<td>";
 			}
 			
@@ -112,7 +113,7 @@
 			
 			for(i=0;i<instr.length;i++){
 				op1_ascii=key_ascii^instr.charCodeAt(i);
-document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+String.fromCharCode(op1_ascii)+"'</td></tr><tr><td class='charbox'>"+op1_ascii+"</td></tr></table></td>";
+document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>"+String.fromCharCode(op1_ascii)+"</td></tr><tr><td class='ascbox'>"+op1_ascii+"</td></tr></table></td>";
 				//document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
 				enc_str=enc_str+String.fromCharCode(op1_ascii);
 			}
@@ -174,7 +175,7 @@ document.getElementById('outchar1').innerHTML=document.getElementById('outchar1'
 		
 		//INPUT DISPLAY
 			for(i=0;i<instr2.length;i++){
-	document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+instr2.charAt(i)+"'</td></tr><tr><td class='charbox'>"+instr2.charCodeAt(i)+"</td></tr></table></td>";
+	document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>"+instr2.charAt(i)+"</td></tr><tr><td class='ascbox'>"+instr2.charCodeAt(i)+"</td></tr></table></td>";
 				//document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td class='charbox'>"+instr2.charAt(i)+"<td>";
 			}
 				
@@ -188,7 +189,7 @@ document.getElementById('outchar1').innerHTML=document.getElementById('outchar1'
 			}
 			
 			for(i=0;i<instr2.length;i++){
-				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='charbox'>"+key2.charCodeAt(0)+"</td></tr><tr><td class='charbox'>'"+key2+"'</td></tr></table></td>";
+				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='ascbox'>"+key2.charCodeAt(0)+"</td></tr><tr><td class='charbox'>"+key2+"</td></tr></table></td>";
 
 				//document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>"+key2+"<td>";
 			}
@@ -204,7 +205,7 @@ document.getElementById('outchar1').innerHTML=document.getElementById('outchar1'
 			
 			for(i=0;i<instr2.length;i++){
 				op1_ascii=key_ascii^instr2.charCodeAt(i);
-document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+String.fromCharCode(op1_ascii)+"'</td></tr><tr><td class='charbox'>"+op1_ascii+"</td></tr></table></td>";
+document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>"+String.fromCharCode(op1_ascii)+"</td></tr><tr><td class='ascbox'>"+op1_ascii+"</td></tr></table></td>";
 				
 				//document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
 				dec_str=dec_str+String.fromCharCode(op1_ascii);
