@@ -104,12 +104,12 @@
             margin-left: 2px;
         }
         .col2{
-                width: 45%;
+                width: 43%;
 		overflow-x:auto;
         }
 
         .col3{
-            width: 21%
+            width: 23%
         }
 
         .row:after {

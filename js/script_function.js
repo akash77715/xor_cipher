@@ -43,7 +43,10 @@
 			
 		}
 		else{
-			alert("Only alphabetical string is acceptable\nString length can range from 1 to 10.");
+			//alert("Only alphabetical string is acceptable\nString length can range from 1 to 10.");
+			document.getElementById('hintenc').style.color="red";
+			document.getElementById('hintenc').style.fontWeight="bold";
+			document.getElementById('in_str').value="";
 		}
 	}
 	function reset(){
@@ -116,8 +119,40 @@
 			document.getElementById('key').disabled = true;
 			document.getElementById('btnenc').disabled = true;
 			document.getElementById("decrypt").style.display="block";
+			document.getElementById('in_str2').value=enc_str;
 			document.getElementById('btnenc').style.backgroundColor = 'grey';
 			document.getElementById('btnenc').value = 'Encrypted';
+			
+			//key select for decrypt
+			if(key=="1"){
+				document.getElementById("key2").selectedIndex = "1";
+			}
+			else if(key=="2"){
+				document.getElementById("key2").selectedIndex = "2";
+			}
+			else if(key=="3"){
+				document.getElementById("key2").selectedIndex = "3";
+			}
+			else if(key=="4"){
+				document.getElementById("key2").selectedIndex = "4";
+			}
+			else if(key=="5"){
+				document.getElementById("key2").selectedIndex = "5";
+			}
+			else if(key=="6"){
+				document.getElementById("key2").selectedIndex = "6";
+			}
+			else if(key=="7"){
+				document.getElementById("key2").selectedIndex = "7";
+			}
+			else if(key=="8"){
+				document.getElementById("key2").selectedIndex = "8";
+			}
+			else if(key=="9"){
+				document.getElementById("key2").selectedIndex = "9";
+			}
+			
+			
 			
 			document.getElementById('out3').innerHTML="CIPHER TEXT : " + enc_str
 			document.getElementById("out3").style.display="block";
@@ -194,7 +229,9 @@
 			document.getElementById("loc18").style.color="white";
 			document.getElementById("loc18").style.fontWeight="bold";
 			document.getElementById("loc18").style.background="red";
-			document.getElementById("hintdec").innerHTML="Length of encrypted text and plain text must be same.<br>Decrypted String mismatched with Original String.";
+			document.getElementById('hintdec').style.color="red";
+			document.getElementById('hintdec').style.fontWeight="bold";
+			document.getElementById("hintdec").innerHTML="Decrypted String mismatched with Original String.";
 			if(instr==dec_str){
 				document.getElementById('in_str2').disabled = true;
 				document.getElementById('key2').disabled = true;
@@ -218,7 +255,9 @@
 			
 		}
 		else{
-			alert("Invalid length!");
+			document.getElementById("hintdec").innerHTML="Length of encrypted text and plain text must be same."
+			document.getElementById('hintdec').style.color="red";
+			document.getElementById('hintdec').style.fontWeight="bold";
 		}
 	}
 	function view_change(){
