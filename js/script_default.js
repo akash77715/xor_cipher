@@ -5,6 +5,7 @@ document.getElementById("loc08").style.color="blue";
 document.getElementById("loc08").style.fontWeight="bold";
 document.getElementById("loc08").style.background="pink";
 document.getElementById("hintasc").style.display="none";
+document.getElementById("quizdiv").style.display = "none";
 document.getElementById("keylabel").style.display="none";
 document.getElementById("inchar").style.display="none";
 document.getElementById("cb").style.display="none";

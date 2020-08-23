@@ -259,6 +259,14 @@ document.getElementById('outchar1').innerHTML=document.getElementById('outchar1'
 				document.getElementById("loc24").style.background="lightgreen";
 				document.getElementById("loc25").style.background="lightgreen";
 				document.getElementById("loc26").style.background="lightgreen";
+				
+				//Quiz Notification
+				document.getElementById("hintdec").innerHTML="Attempt the task given below!";
+				document.getElementById("hintdec").style.color="red";
+				document.getElementById("hintdec").style.display = "block";
+				
+				//Activating Quiz div
+				document.getElementById("quizdiv").style.display = "block";
 			}
 			
 		}
@@ -268,3 +276,176 @@ document.getElementById('outchar1').innerHTML=document.getElementById('outchar1'
 			document.getElementById('hintdec').style.fontWeight="bold";
 		}
 	}
+function viewresult(){
+var qans=0;
+var selected=0;
+
+//checking for total marked answers
+if(document.getElementById("op11").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op12").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op13").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op14").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op21").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op22").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op31").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op32").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op33").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op34").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op41").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op42").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op43").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op44").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op45").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op51").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op52").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op53").checked==true){
+	selected=selected+1;
+}
+if(document.getElementById("op54").checked==true){
+	selected=selected+1;
+}
+
+if(selected==5){
+//checking users response
+if(document.getElementById("op11").checked==true){
+	document.getElementById("lop11").style.color = 'red'; // red or #fffff
+}
+if(document.getElementById("op12").checked==true){
+	document.getElementById("lop12").style.color = 'red';
+}
+if(document.getElementById("op13").checked==true){
+	document.getElementById("lop13").style.color = 'red';
+}
+if(document.getElementById("op14").checked==true){
+	document.getElementById("lop14").style.color = 'red';
+}
+if(document.getElementById("op21").checked==true){
+	document.getElementById("lop21").style.color = 'red';
+}
+if(document.getElementById("op22").checked==true){
+	document.getElementById("lop22").style.color = 'red';
+}
+if(document.getElementById("op31").checked==true){
+	document.getElementById("lop31").style.color = 'red';
+}
+if(document.getElementById("op32").checked==true){
+	document.getElementById("lop32").style.color = 'red';
+}
+if(document.getElementById("op33").checked==true){
+	document.getElementById("lop33").style.color = 'red';
+}
+if(document.getElementById("op34").checked==true){
+	document.getElementById("lop34").style.color = 'red';
+}
+if(document.getElementById("op41").checked==true){
+	document.getElementById("lop41").style.color = 'red';
+}
+if(document.getElementById("op42").checked==true){
+	document.getElementById("lop42").style.color = 'red';
+}
+if(document.getElementById("op43").checked==true){
+	document.getElementById("lop43").style.color = 'red';
+}
+if(document.getElementById("op44").checked==true){
+	document.getElementById("lop44").style.color = 'red';
+}
+if(document.getElementById("op45").checked==true){
+	document.getElementById("lop45").style.color = 'red';
+}
+if(document.getElementById("op51").checked==true){
+	document.getElementById("lop51").style.color = 'red';
+}
+if(document.getElementById("op52").checked==true){
+	document.getElementById("lop52").style.color = 'red';
+}
+if(document.getElementById("op53").checked==true){
+	document.getElementById("lop53").style.color = 'red';
+}
+if(document.getElementById("op54").checked==true){
+	document.getElementById("lop54").style.color = 'red';
+}
+
+
+
+
+
+//checking correct answers
+if(document.getElementById("op11").checked==true){
+	qans=qans+1;
+	}
+if(document.getElementById("op22").checked==true){
+	qans=qans+1;
+	}
+if(document.getElementById("op32").checked==true){
+	qans=qans+1;
+	}
+if(document.getElementById("op42").checked==true){
+	qans=qans+1;
+	}
+if(document.getElementById("op53").checked==true){
+	qans=qans+1;
+	}
+	//marking correct answers
+	document.getElementById("lop11").style.color = '#2fd677'; 
+	document.getElementById("lop22").style.color = '#2fd677'; 
+	document.getElementById("lop32").style.color = '#2fd677'; 
+	document.getElementById("lop42").style.color = '#2fd677'; 
+	document.getElementById("lop53").style.color = '#2fd677'; 
+	
+	//Rating according to number of correct answers
+	if(qans<=2){
+		document.getElementById('score').innerHTML="Beginner! Your score is "+qans+"/5.";
+		document.getElementById("score").style.color = 'red';
+	}
+	else if(qans<5 && qans>2){
+		document.getElementById('score').innerHTML="Amazing! Your score is "+qans+"/5.";
+		document.getElementById("score").style.color = 'blue';
+	}
+	else{
+		document.getElementById('score').innerHTML="Extraordinary! Your score is "+qans+"/5.";
+		document.getElementById("score").style.color = '#2fd677'; //light green
+	}
+	
+	document.getElementById('quizsubmit').disabled= true;
+	document.getElementById('quizsubmit').style.backgroundColor='grey';
+	}
+	else{
+		document.getElementById('score').innerHTML="Attempt all questions!";
+		document.getElementById("score").style.color = 'red';
+	}
+}
+
