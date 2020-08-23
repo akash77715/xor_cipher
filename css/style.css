@@ -21,44 +21,37 @@
 		.textbox:focus{
 			outline: none;
 		}
-		.viewas {
-		width:100px;
-        padding: 2px 2px;
-		border: 2px solid black;
-		}
-		.viewas:focus{
-			outline: none;
-		}
+		
 		
 		.charbox {
-			width: 25px;
-			height: 35px;
-			padding: 5px 10px;
-			border: 2px solid black;
+			width: 35px;
+			height: 25px;
+			padding: 5px 5px;
+			border: 1.5px solid black;
 			margin-left:3px;
 			font-weight:bold;
-			font-size:30px;
+			font-size:20px;
 		}
 		
 		.cbox {
 			width: 25px;
-			height: 35px;
+			height: 30px;
 			padding: 5px 10px;
-			border: 2px solid black;
+			border: 1px solid black;
 			margin-left:3px;
 			font-weight:bold;
-			font-size:30px;
+			font-size:20px;
 			border-radius:50%;
 		}
 		
 		.eqlbox {
-			width: 25px;
-			height: 35px;
-			padding: 5px 10px;
-			border: 2px solid white;
+			width: 37px;
+			height: 30px;
+			padding: 5px 5px;
+			border: 1px solid white;
 			margin-left:3px;
 			font-weight:bold;
-			font-size:30px;
+			font-size:20px;
 		}
 		
 	
@@ -107,9 +100,19 @@
                 width: 43%;
 		overflow-x:auto;
         }
-
         .col3{
-            width: 23%
+            width: 22%
+        }
+		.enccol {
+            float: left;
+            width: 44%;
+            height: 110px;
+			overflow-x:auto;
+            margin-left: 20px;
+        }
+        .col2{
+                width: 44%;
+				overflow-x:auto;
         }
 
         .row:after {
@@ -128,7 +131,7 @@
     margin: 0px 0px 12px 12px; 
     padding: 12px 12px 12px 12px; 
     border-radius: 0px;
-    font-size: 12px;
+    font-size: 12.5px;
 	border-color:1px solid black;
 	border-collapse: separate;
 }

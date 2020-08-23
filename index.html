@@ -82,16 +82,8 @@
 			<div id="in_dis" class="column col2" style="text-align:center;">
 			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Process</h2>
 			<center>
-			<div style="float:right;font-size:19px;">
-			view&nbsp;<select class="viewas" onchange="view_change()">
-				<option>Logical</option>
-				<option>Code</option>
-			</select>
-			</div>
-			<br>
 			
-			<hr>
-			<div id="logical">
+			<div id="logical" style="height:350px;">
 			
 			<div  id="inchar">
 				<table style="text-align:center;">
@@ -99,6 +91,7 @@
 				</tr>
 				</table>
 			</div>
+		
 			
 			<!--XOR SYMBOL-->
 			<div id="cb">
@@ -130,14 +123,35 @@
 			
 			<!-- OUTPUT DISPLAY -->
 			<div id="outchar">
-				<table>
+				<table style="text-align:center;">
 				<tr id="outchar1">
 				</tr>
 				</table>
 			</div>
 			</div>
-			
-			<div id="code">
+
+			<div class="row">
+			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px;margin-bottom:0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Output</h2>
+			<div class="enccol">
+			<h1 style="font-size:25px;" id="outenc">Encryption</h1>
+				<span id="out1" style="font-weight:bold;font-size:15px;"></span>
+				<span id="out3" style="font-weight:bold;font-size:15px;"></span>
+			</div>
+			<div class="enccol col2">
+				<h1 style="font-size:25px;" id="outdec">Decryption</h1>
+				<span id="out4" style="font-weight:bold;font-size:15px;"></span>
+				<span id="out6" style="font-weight:bold;font-size:15px;"></span>
+			</div>
+			</div>
+			</center>
+			</div>
+		
+			<div class="column col3">
+			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Code Execution</h2>
+				
+				
+				
+							<div id="code">
 				<table class="codetable">
 	
 	<tr id="loc01">
@@ -252,21 +266,7 @@
 	
 	</table>
 			</div>
-			
-			</center>
-			</div>
-		
-			<div class="column col3">
-			<h2 style="background-color: #ccc; height:40px ; margin-top: 0px; padding-top: 7px;border: 3px solid #000000 ;text-align:center;">Output</h2>
-				<h1 id="outenc">Encryption</h1>
-				<span id="out1" style="font-weight:bold;font-size:25px;"></span><br>
-				<span id="out2" style="font-weight:bold;font-size:25px;"></span><br>
-				<span id="out3" style="font-weight:bold;font-size:25px;"></span><br>
 				
-				<h1 id="outdec">Decryption</h1>
-				<span id="out4" style="font-weight:bold;font-size:25px;"></span><br>
-				<span id="out5" style="font-weight:bold;font-size:25px;"></span><br>
-				<span id="out6" style="font-weight:bold;font-size:25px;"></span><br>
 			</div>
 			
 		</div>

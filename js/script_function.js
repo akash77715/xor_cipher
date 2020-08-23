@@ -4,14 +4,14 @@
 	var key2;
 	var enc_str="";
 	var dec_str="";
-	var view=1;
 	function store(){
 		instr=document.getElementById('in_str').value.trim();
 		var letters = /^[A-Za-z]+$/;
 		if(instr.match(letters) && instr.length>0){
 			//INPUT DISPLAY
 			for(i=0;i<instr.length;i++){
-				document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td class='charbox'>"+instr.charAt(i)+"<td>";
+				document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+instr.charAt(i)+"'</td></tr><tr><td class='charbox'>"+instr.charCodeAt(i)+"</td></tr></table></td>";
+			//	"<td class='charbox'>'"+instr.charAt(i)+"'<td>";
 			}
 			
 			
@@ -55,17 +55,19 @@
 	function keystore(){
 		var e =  document.querySelector('#key');
 		key = e.value;
+	
 		//KEY DISPLAY
 			for(i=0;i<instr.length;i++){
 				document.getElementById('cbox').innerHTML=document.getElementById('cbox').innerHTML+"<td class='eqlbox'><img src='images/xor_icon.png' width='99%' height='90%'><td>";
 			}
 			
 			for(i=0;i<instr.length;i++){
-				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>"+key+"<td>";
+			
+				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='charbox'>"+key.charCodeAt(0)+"</td></tr><tr><td class='charbox'>'"+key+"'</td></tr></table></td>";
+				//document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>'"+key+"'<td>";
 			}
 			
-			document.getElementById('out2').innerHTML="KEY : " + key;
-			document.getElementById("out2").style.display="block";
+			
 			
 			document.getElementById("cb").style.display="block";
 			document.getElementById("keyb").style.display="block";
@@ -110,7 +112,8 @@
 			
 			for(i=0;i<instr.length;i++){
 				op1_ascii=key_ascii^instr.charCodeAt(i);
-				document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
+document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+String.fromCharCode(op1_ascii)+"'</td></tr><tr><td class='charbox'>"+op1_ascii+"</td></tr></table></td>";
+				//document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
 				enc_str=enc_str+String.fromCharCode(op1_ascii);
 			}
 			
@@ -154,7 +157,8 @@
 			
 			
 			
-			document.getElementById('out3').innerHTML="CIPHER TEXT : " + enc_str
+			document.getElementById('out3').innerHTML="CIPHER TEXT : " + enc_str;
+			document.getElementById('out3').style.color="green";
 			document.getElementById("out3").style.display="block";
 	
 	}
@@ -170,7 +174,8 @@
 		
 		//INPUT DISPLAY
 			for(i=0;i<instr2.length;i++){
-				document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td class='charbox'>"+instr2.charAt(i)+"<td>";
+	document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+instr2.charAt(i)+"'</td></tr><tr><td class='charbox'>"+instr2.charCodeAt(i)+"</td></tr></table></td>";
+				//document.getElementById('inchar1').innerHTML=document.getElementById('inchar1').innerHTML+"<td class='charbox'>"+instr2.charAt(i)+"<td>";
 			}
 				
 			
@@ -183,7 +188,9 @@
 			}
 			
 			for(i=0;i<instr2.length;i++){
-				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>"+key2+"<td>";
+				document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td><table><tr><td class='charbox'>"+key2.charCodeAt(0)+"</td></tr><tr><td class='charbox'>'"+key2+"'</td></tr></table></td>";
+
+				//document.getElementById('keyb1').innerHTML=document.getElementById('keyb1').innerHTML+"<td class='charbox'>"+key2+"<td>";
 			}
 			
 			
@@ -197,18 +204,18 @@
 			
 			for(i=0;i<instr2.length;i++){
 				op1_ascii=key_ascii^instr2.charCodeAt(i);
-				document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
+document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td><table><tr><td class='charbox'>'"+String.fromCharCode(op1_ascii)+"'</td></tr><tr><td class='charbox'>"+op1_ascii+"</td></tr></table></td>";
+				
+				//document.getElementById('outchar1').innerHTML=document.getElementById('outchar1').innerHTML+"<td class='charbox'>"+String.fromCharCode(op1_ascii)+"<td>";
 				dec_str=dec_str+String.fromCharCode(op1_ascii);
 			}
 			
 			
 			document.getElementById('out4').innerHTML="CIPHER TEXT : " + instr2;
-			document.getElementById('out5').innerHTML="KEY : " + key2;
 			document.getElementById('out6').innerHTML="PLAIN TEXT : " + dec_str;
 			
 			document.getElementById("outdec").style.display="block";
 			document.getElementById("out4").style.display="block";
-			document.getElementById("out5").style.display="block";
 			document.getElementById("out6").style.display="block";
 			
 			document.getElementById("out6").style.color = 'red';
@@ -258,17 +265,5 @@
 			document.getElementById("hintdec").innerHTML="Length of encrypted text and plain text must be same."
 			document.getElementById('hintdec').style.color="red";
 			document.getElementById('hintdec').style.fontWeight="bold";
-		}
-	}
-	function view_change(){
-		if(view==1){
-			document.getElementById("logical").style.display="none";
-			document.getElementById("code").style.display="block";
-			view=0;
-		}
-		else{
-			document.getElementById("code").style.display="none";
-			document.getElementById("logical").style.display="block";
-			view=1;
 		}
 	}

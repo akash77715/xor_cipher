@@ -14,7 +14,6 @@ document.getElementById("out3").style.display="none";
 document.getElementById("out4").style.display="none";
 document.getElementById("out5").style.display="none";
 document.getElementById("out6").style.display="none";
-document.getElementById("code").style.display="none";
 document.getElementById("loc07").style.color="blue";
 document.getElementById("loc07").style.fontWeight="bold";
 document.getElementById("loc07").style.background="pink";
