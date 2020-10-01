@@ -110,21 +110,27 @@
             border: medium solid #000000;
 	    border-radius: 2%;
 	    overflow-x:auto;
+		margin: 1px;
             margin-left: 2px;
+		
         }
         .col2{
                 width: 43%;
 		overflow-x:auto;
+		margin: 1px;
         }
         .col3{
-            width: 22%
+            width: 22%;
+		    margin: 1px;
         }
 		.enccol {
             float: left;
             width: 44%;
             height: 110px;
 			overflow-x:auto;
+			
             margin-left: 20px;
+			
         }
         .enccol2{
                 width: 44%;
