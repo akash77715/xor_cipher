@@ -8,6 +8,15 @@
             text-align: center;
             font-size: 15px;
         }
+
+@media only screen and (max-width: 1240px) {
+	.col1,.col2,.col3{
+		width: 95% !important;
+	}
+	.col1,.col3{
+		height: auto !important;
+	}
+}
 		
 		.textbox {
 		width:200px;
@@ -131,12 +140,9 @@
             display: table;
             clear: both;
         }
-		 @media screen and (max-width: 600px) {
-            .column {
-                width: 93%;
-            }
 		
-        }
+
+
 		.codetable{
     background-color: whitesmoke; 
     margin: 0px 0px 12px 12px; 
