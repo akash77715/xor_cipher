@@ -1,9 +1,9 @@
 @media only screen and (max-width: 1240px) {
 
-	.col1,.col2,.col3{
+	.column,.col2,.col3{
 		width: 95% !important;
 	}
-	.col1,.col3{
+	.column,.col3{
 		height: auto !important;
 	}		
 }
